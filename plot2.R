@@ -1,7 +1,8 @@
-# Reading Dataset and subsetting for plotting data
+#Loading source data
 source("load_data.R")
 
-png("plot2.png")
-par(mar = c(5, 5, 4, 2))
-with(plotDat, plot(DateTime, Global_active_power, type = "l", main = "", xlab = "", ylab = "Global Active Power (kilowatts)"))
+#plotting plot2.png
+
+png(filename = "plot2.png", width = 480, height = 480, units = "px", bg = "transparent")
+plot(plotD$DateTime, plotD$Global_active_power, type="l", ylab="Global Active Power(kilowatts)", xlab="")
 dev.off()

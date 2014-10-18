@@ -1,8 +1,7 @@
-# Reading Dataset and subsetting for plotting data
+#Loading source data
 source("load_data.R")
 
-# Plotting plot1.png
-png("plot1.png")
-par(mar = c(5, 5, 4, 2))
-hist(plotDat$Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red")
+#plotting plot1.png
+png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "transparent")
+hinfo<-hist(plotD$Global_active_power, col="red", xlab="Global Active Power(Kilowatts)", main="Global Active Power", ylim=c(0,1200), breaks=12)
 dev.off()
